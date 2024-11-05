@@ -1,0 +1,29 @@
+{
+  "name": "to-do-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch --no-warnings server.js"
+  },
+  "keywords": [],
+  "author": "Matheus Paiva",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheuspaiva1/API-cadastro-tarefas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matheuspaiva1/API-cadastro-tarefas/issues"
+  },
+  "homepage": "https://github.com/matheuspaiva1/API-cadastro-tarefas#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "fastify": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
