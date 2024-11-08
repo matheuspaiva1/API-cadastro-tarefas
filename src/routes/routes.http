@@ -1,0 +1,8 @@
+POST http://localhost:3000/task
+Content-Type: application/json
+
+{
+  "title": "Estudar Node",
+  "description": "Passar o dia estudando",
+  "checked": false
+}

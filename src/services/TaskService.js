@@ -1,10 +1,11 @@
 import {randomUUID} from 'node:crypto';
 
-export class TaskService{
+class TaskService{
   #tasks = new Map();
   
   createTask(task){
-
+    const taskId = randomUUID();
+    this.#tasks.set(taskId, task);
   }
 
   listTasks (search) {
@@ -23,3 +24,5 @@ export class TaskService{
 
   }
 }
+
+module.exports = TaskService;

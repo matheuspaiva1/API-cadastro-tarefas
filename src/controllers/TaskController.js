@@ -1,14 +1,14 @@
-import {randomUUID} from 'node:crypto';
+const {randomUUID} = require('node:crypto')
 const sql = require('../database/db');
 
 
-export class TaskController{
+class TaskController{
   async createTask(task){
     const taskId = randomUUID()
-    const {title, description, checked, createdAt, updatedAt} = task
+    const {title, description, checked} = task
 
     await sql.query(`
-      insert into task (id, title, description, checked, createdAt, updatedAt) VALUES (${taskId}, ${title}, ${description}, ${checked}, ${createdAt}, ${updatedAt})
+      insert into task (id, title, description, checked) VALUES (${taskId}, ${title}, ${description}, ${checked})
     `)
     
   }
@@ -29,3 +29,4 @@ export class TaskController{
 
   }
 }
+module.exports = TaskController;
